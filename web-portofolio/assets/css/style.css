@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Pengaturan Variabel Warna & Tema */
+:root {
+    --bg-light: #F8FAFC;
+    --text-light: #1E293B;
+    --bg-dark: #0F172A; /* Slate 900 / Black Tone */
+    --text-dark: #F8FAFC;
+    --primary-blue: #3B82F6;
+    --secondary-blue: #1D4ED8;
+    --card-dark: #1E293B;
+}
+
+/* Custom Tailwind Utility Layer */
+@layer utilities {
+    .bg-darkbg {
+        background-color: var(--bg-dark);
+    }
+    .bg-carddark {
+        background-color: var(--card-dark);
+    }
+}
+
+/* CSS Global */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Transisi Halus untuk Light/Dark Mode */
+.smooth-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling Range Slider Input (Kalkulator Interaktif) */
+input[type=range] {
+    accent-color: var(--primary-blue);
+}
+
+/* Custom Scrollbar Modern */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1D4ED8;
+}
